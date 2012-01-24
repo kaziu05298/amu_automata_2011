@@ -8,7 +8,7 @@ import pl.edu.amu.wmi.daut.base.NaiveAutomatonSpecification;
 
 /**
  * Klasa reprezentująca operator '^' z wyrażeń regularnych
- * (dowolna liczba wystąpień, w szczególności 0).
+ * (dowolna liczba wystąpień, w szczególności zero).
  */
 public class NegationOperator extends UnaryRegexpOperator {
 
