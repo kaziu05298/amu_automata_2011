@@ -15,8 +15,8 @@ public class NegationOperator extends UnaryRegexpOperator {
     @Override
     public final AutomatonSpecification createAutomatonFromOneAutomaton(
             AutomatonSpecification subautomaton) {
-        return AutomataOperations.reverseLanguageAutomaton
-                ((NaiveAutomatonSpecification) subautomaton);
+        return AutomataOperations.reverseLanguageAutomaton(
+                (NaiveAutomatonSpecification) subautomaton);
     }
 
     /**
