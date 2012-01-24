@@ -4,17 +4,18 @@ import java.util.List;
 
 import pl.edu.amu.wmi.daut.base.AutomataOperations;
 import pl.edu.amu.wmi.daut.base.AutomatonSpecification;
+import pl.edu.amu.wmi.daut.base.NaiveAutomatonSpecification;
 
 /**
  * Klasa reprezentująca operator '^' z wyrażeń regularnych
- * (dowolna liczba wystąpień, w szczególności brak).
+ * (dowolna liczba wystąpień, w szczególności 0).
  */
 public class NegationOperator extends UnaryRegexpOperator {
 
     @Override
     public final AutomatonSpecification createAutomatonFromOneAutomaton(
             AutomatonSpecification subautomaton) {
-        return AutomataOperations.reverseLanguageAutomaton(subautomaton);
+        return AutomataOperations.reverseLanguageAutomaton((NaiveAutomatonSpecification) subautomaton);
     }
 
     /**
